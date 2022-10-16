@@ -15,6 +15,6 @@ public class Main {
         // System.out.println(box5.weight); this will not work
         // child ref var and parent obj will not work vice versa will work
         // BoxWeight box6 = new Box(2, 3, 4);// this will not work
-        BoxPrice boxprice = new BoxPrice(3, 8, 200);
+        // BoxPrice boxprice = new BoxPrice(3, 8, 200);
     }
 }
