@@ -4,9 +4,10 @@ package Swap;
 public class Main {
 
     public static void swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
+        // a = 5, b = 7
+        int temp = a; // temp = 5
+        a = b; // a = 7
+        b = temp; // b = 5
         System.out.println("value of a: " + a + " Value of b: " + b);
     }
 

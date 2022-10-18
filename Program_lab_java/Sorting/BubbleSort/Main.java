@@ -22,11 +22,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 8, 5, 3, 7, 2 };
-        int n = arr.length;
-        bubbleSort(arr, n);
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        // int[] arr = { 8, 5, 3, 7, 2 };
+        // int n = arr.length;
+        // bubbleSort(arr, n);
+        // for (int i : arr) {
+        // System.out.println(i);
+        // }
     }
 }
