@@ -12,7 +12,7 @@ public class Main {
             }
             if (cube == i) {
                 System.out.println(i + " is an Armstrong Number");
-            }
+            } 
         }
     }
 }

@@ -3,7 +3,7 @@ package MCQ;
 // output will be 60
 public class qthree {
     public static void main(String[] args) {
-        Car obj = new Car();
+        new Car();
     }
 }
 
