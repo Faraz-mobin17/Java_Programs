@@ -9,7 +9,6 @@ public class Fifth {
     }
 
     Fifth(int x, int y) {
-
         System.out.println(x + " " + y);
     }
 
