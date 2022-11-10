@@ -28,12 +28,12 @@ public class Main {
         try {
             String name_one = args[0];
             String name_two = args[1];
-            int marks;
+            // int marks;
             for (int i = 2; i < 8; i += 1) {
-                marks = Integer.parseInt(args[i]);
+                int marks = Integer.parseInt(args[i]);
 
                 if (marks < 0 || marks > 100) {
-                    throw new IllegalArgumentException("Illegal argument exception");
+                    throw new IllegalArgumentException("Illegal argument exception put valid args");
                 }
             }
         } catch (IllegalArgumentException e) {
