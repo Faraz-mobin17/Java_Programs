@@ -26,18 +26,14 @@ public class Main {
         // }
         // Method Two (better code)
         try {
-            String name_one = args[0];
-            String name_two = args[1];
-            // int marks;
+            String name_one = args[0], name_two = args[1];
             for (int i = 2; i < 8; i += 1) {
                 int marks = Integer.parseInt(args[i]);
-
                 if (marks < 0 || marks > 100) {
                     throw new IllegalArgumentException("Illegal argument exception put valid args");
                 }
             }
         } catch (IllegalArgumentException e) {
-            // TODO: handle exception
             System.out.println(e.getMessage());
             throw e;
         } catch (Exception e) {
