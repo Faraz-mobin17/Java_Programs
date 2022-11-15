@@ -6,5 +6,6 @@ public class Main {
         // we can use try block
         Thread.sleep(1000);
         System.out.println("hello");
+
     }
 }

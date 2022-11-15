@@ -8,6 +8,10 @@ public class Main {
     }
 }
 
+abstract class D {
+    abstract void abc();
+}
+
 interface A {
     void display();
 }
