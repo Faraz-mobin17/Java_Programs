@@ -1,2 +1,0 @@
-two public classes cannot be in a same file one public class should be their of same name as file name
-your main function should be on the top
