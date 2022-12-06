@@ -1,5 +1,5 @@
 package Lowercase_or_uppercase;
-
+import java.util.Scanner;
 public class Main {
 
     public static void checkCase(char input) {
@@ -13,7 +13,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        char input = '#';
+		Scanner sc = new Scanner(System.in);
+		char input = sc.next().charAt(0);
         checkCase(input);
     }
 }
