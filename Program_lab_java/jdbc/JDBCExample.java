@@ -1,13 +1,12 @@
-package checkConnection;
 
-import java.util.*;
+// import java.util.*;
 import java.sql.*;
 import java.io.*;
 
 public class JDBCExample {
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			// Class.forName("com.mysql.jdbc.Driver");
 			String URL = "jdbc:mysql://localhost:3306/bank";
 			String USERNAME = "root";
 			String PASSWORD = "";

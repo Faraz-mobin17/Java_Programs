@@ -1,4 +1,3 @@
-package MysqlScrolling;
 
 import java.sql.*;
 

@@ -1,4 +1,3 @@
-package SqlTest;
 
 /*
  * import the package
@@ -19,7 +18,7 @@ import java.sql.*;
 public class MysqlCon {
     public static void main(String args[]) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            // Class.forName("com.mysql.jdbc.Driver");
             // here bank is database name, root is username and password is empty
             String URL = "jdbc:mysql://localhost:3306/bank";
             String username = "root";
