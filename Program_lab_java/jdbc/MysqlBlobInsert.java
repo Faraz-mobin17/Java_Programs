@@ -15,14 +15,14 @@ public class MysqlBlobInsert {
         String URL = "jdbc:mysql://localhost:3306/java?serverTimezone=UTC";
         String username = "root";
         String password = "";
-        String filePath = "C:/Users/FARAZ/Pictures/grades.png";
+        String filePath = "C:/Users/FARAZ/Pictures/bill.jpg";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            // Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(URL, username, password);
             String sql = "INSERT INTO Person(First_name,Last_name,Photo) VALUES(?,?,?)";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, "Elon");
-            statement.setString(2, "Musk");
+            statement.setString(1, "bill");
+            statement.setString(2, "gates");
             InputStream inputStream = new FileInputStream(new File(filePath));
             statement.setBlob(3, inputStream);
             int row = statement.executeUpdate();
