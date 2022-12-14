@@ -2,68 +2,6 @@ import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 
-// public class Japplet1 extends Applet implements MouseListener,MouseMotionListener    {
-//     int x = 240, y = 240;
-//     String msg = "Mouse events";
-
-//     public void init() {
-//         addMouseListener(this);
-//         addMouseMotionListener(this);
-//         setBackground(Color.black);
-//         setForeground(Color.white);
-//     }
-
-//     public void mouseClicked(MouseEvent me) {
-//         msg = "Mouse clicked";
-//         setBackground(Color.blue);
-//         showStatus("Mouse Entered");
-//         repaint();
-//     }
-
-//     public void mouseExited(MouseEvent me) {
-//         msg = "Mouse exited";
-//         setBackground(Color.yellow);
-//         showStatus("Mouse Entered");
-//         repaint();
-//     }
-
-//     public void mousePressed(MouseEvent me) {
-//         msg = "Mouse exited";
-//         setBackground(Color.yellow);
-//         setBackground(Color.orange);
-//         showStatus("Mouse Pressed");
-//         repaint();
-//     }
-
-//     public void mouseReleased(MouseEvent me) {
-//         msg = "Mouse Released";
-//         setBackground(Color.lightGray);
-//         showStatus(msg);
-//         repaint();
-//     }
-
-//     public void mouseMoved(MouseEvent me) {
-//         msg = "MOuse moved";
-//         setBackground(Color.green);
-//         showStatus(msg);
-//         repaint();
-//     }
-
-//     public void mouseDragged(MouseEvent me) {
-//         msg = "Mouse Dragged";
-//         setBackground(Color.magenta);
-//         showStatus(msg);
-//         repaint();
-//     }
-
-//     public void paint(Graphics g) {
-//         Font f = new Font("Times New Roman", 3, 40);
-//         g.setFont(f);
-//         g.drawString(msg, x, y);
-//     }
-
-// }
-
 public class Japplet1 extends Applet implements MouseListener, MouseMotionListener {
     String msg = "Mouse events";
 

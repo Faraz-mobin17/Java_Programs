@@ -11,7 +11,6 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 		setBackground(Color.white);
 		addMouseListener(this);
 		addMouseMotionListener(this);
-
 	}
 
 	public void mouseClicked(MouseEvent me) {
