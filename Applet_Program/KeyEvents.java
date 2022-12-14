@@ -6,9 +6,6 @@ import javafx.scene.input.KeyEvent;
 
 import java.applet.*;
 
-/*
- * <applet code="KeyEvents" width="300" height="100"></applet>
- */
 public class KeyEvents extends Applet implements KeyListener {
     String msg = "";
     int x = 10, y = 20;
@@ -21,26 +18,28 @@ public class KeyEvents extends Applet implements KeyListener {
         showStatus("key down");
         KeyCode key = ke.getCode();
         switch (key) {
-            case key.F1:
+            case F1:
                 msg += "<F1>";
                 break;
-            case key.F2:
+            case F2:
                 msg += "<F2>";
                 break;
-            case key.F3:
+            case F3:
                 msg += "<F3>";
                 break;
-            case key.PAGE_DOWN:
+            case PAGE_DOWN:
                 msg += "<PgDn>";
                 break;
-            case key.PAGE_UP:
+            case PAGE_UP:
                 msg += "<PgUn>";
                 break;
-            case key.LEFT:
+            case LEFT:
                 msg += "<Left Arrow>";
                 break;
-            case key.RIGHT:
+            case RIGHT:
                 msg += "<Right Arrow>";
+                break;
+            default:
                 break;
         }
         repaint();
@@ -83,3 +82,7 @@ public class KeyEvents extends Applet implements KeyListener {
 
     }
 }
+
+/*
+ * <applet code="KeyEvents" width="300" height="100"></applet>
+ */
