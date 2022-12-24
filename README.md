@@ -11,3 +11,7 @@
 **OR**
 
 `C:\>java Filename.java`
+
+## How to run Applet Program
+
+`C:\>appletviewer.exe Filename.java`
