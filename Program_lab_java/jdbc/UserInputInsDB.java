@@ -1,11 +1,11 @@
-/* Program to Delete the records of localhost user created databse which is java and table name is jar.*/
-
+/* Program to take input from the user and insert a sno and name in the localhost user created databse which is java and table name is jar.*/
 // this package is nesussary because we are kelling this program in a folder so we must specify the package.
 
 import java.sql.*;
 import java.io.*;
+//its a package which allow us to work SQL in jAVA.
 
-public class DeleteDB {
+public class UserInputInsDB {
     public static void main(String args[]) {
         Console c = System.console();
         Connection con = null;
@@ -14,7 +14,6 @@ public class DeleteDB {
 
         try {
             // Class.forName("com.mysql.cj.jdbc.Driver");
-            
             // class.forName is the method which tells us which driver we are using in our
             // program.
 
@@ -27,22 +26,37 @@ public class DeleteDB {
             // the default user name of localhost and empty double quotes "" is the default
             // pasword.
 
-            String sno = c.readLine("Enter S.No : You want to delete : ");
-            String query = "delete from student where sid=" + sno;
+            String sno = c.readLine("Enter Serial Number : ");
+            // Taking input
+
+            String name = c.readLine("Enter Name : ");
+            String mark = c.readLine("Enter mark");
+            String status = c.readLine("Enter status pass or fail");
+            // From the user
+
+            String str = String.format("insert into student(sid,name,mark,status) values(%s,'%s',%s,'%s')", sno, name,
+                    mark, status);
+            // here String.format is a method by which we
+            // can easily take input from the user and store those values by this way.
+
+            // String str="insert into jar(sno,name) values("+sno+",'"+name+"')";
+            // here (sno,name) is the name of row in our local
+            // database table and ("+sno+") double quotes +--+ is use to put the given value
+            // by the user.
 
             Statement st = con.createStatement();
             // Statement is a class in SQL package and con.CreateStaement
             // (con is the object of clas Connection ) is method so we are storing it in
             // object st.
 
-            st.execute(query);
-            int i = st.executeUpdate(query);
-            System.out.println(i + "1 row deleted");
+            st.execute(str);
+            // st.execute is the method.
 
+            System.out.println("Data Added Successfully");
         } catch (Exception e) {
             System.out.println(e);
         }
-        System.out.println("\n Exit");
-        // \n is for the new line
+        System.out.println("exit from main");
+
     }
 }

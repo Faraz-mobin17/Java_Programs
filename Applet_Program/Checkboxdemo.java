@@ -6,10 +6,10 @@ import javafx.scene.control.CheckBox;
 
 public class Checkboxdemo extends Applet {
     public void init() {
-        Checkbox c1 = new Checkbox("singing");
-        Checkbox c2 = new Checkbox("cycling");
-        Checkbox c3 = new Checkbox("swimming");
-        Checkbox c4 = new Checkbox("para jumping");
+        Checkbox c1 = new Checkbox("JAVA");
+        Checkbox c2 = new Checkbox("CPP");
+        Checkbox c3 = new Checkbox("C");
+        Checkbox c4 = new Checkbox("PHP");
         add(c1);
         add(c2);
         add(c3);
@@ -17,7 +17,7 @@ public class Checkboxdemo extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Checkbox DEMO", 100, 100);
+        g.drawString("SELECT YOUR FAVOURITE PROGRAMMING LANGUAGE", 100, 100);
     }
 }
 

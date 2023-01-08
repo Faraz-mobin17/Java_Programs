@@ -8,13 +8,13 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	int mouseX = 0, mouseY = 0;
 
 	public void init() {
-		setBackground(Color.white);
+		setBackground(Color.ORANGE);
 		addMouseListener(this);
 		addMouseMotionListener(this);
 	}
 
 	public void mouseClicked(MouseEvent me) {
-		setBackground(Color.red);
+		setBackground(Color.DARK_GRAY);
 		mouseX = 100;
 		mouseY = 100;
 		msg = "Mouse Clicked";
@@ -22,7 +22,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mouseEntered(MouseEvent me) {
-		setBackground(Color.blue);
+		setBackground(Color.MAGENTA);
 		mouseX = 100;
 		mouseY = 100;
 		msg = "Mouse Entered";
@@ -30,7 +30,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mouseExited(MouseEvent me) {
-		setBackground(Color.orange);
+		setBackground(Color.WHITE);
 		mouseX = 100;
 		mouseY = 100;
 		msg = "Mouse Exited";
@@ -39,7 +39,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mousePressed(MouseEvent me) {
-		setBackground(Color.yellow);
+		setBackground(Color.MAGENTA);
 		mouseX = me.getX();
 		mouseY = me.getY();
 		msg = "Mouse Pressed";
@@ -47,7 +47,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mouseReleased(MouseEvent me) {
-		setBackground(Color.red);
+		setBackground(Color.GREEN);
 		mouseX = me.getX();
 		mouseY = me.getY();
 		msg = "Mouse Released";
@@ -55,7 +55,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mouseDragged(MouseEvent me) {
-		setBackground(Color.white);
+		setBackground(Color.black);
 		mouseX = me.getX();
 		mouseY = me.getY();
 		msg = "Mouse is Dragged";
@@ -64,7 +64,7 @@ public class MouseEventNew extends Applet implements MouseListener, MouseMotionL
 	}
 
 	public void mouseMoved(MouseEvent me) {
-		setBackground(Color.red);
+		setBackground(Color.cyan);
 		// mouseX=me.getX();
 		// mouseY=me.getY();
 		// msg="Mouse is Moved";

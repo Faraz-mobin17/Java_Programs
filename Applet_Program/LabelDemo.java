@@ -6,14 +6,14 @@ public class LabelDemo extends Applet {
     public void init() {
         setBackground(Color.white);
         setForeground(Color.black);
-        Label l1 = new Label("University");
-        Label l2 = new Label("AIIT");
+        Label l1 = new Label("Enter Username: ");
+        Label l2 = new Label("Enter Password: ");
         add(l1);
         add(l2);
     }
 
     public void paint(Graphics g) {
-        g.drawString("LABEL DEMO", 100, 100);
+        g.drawString("Login Label", 100, 100);
     }
 }
 

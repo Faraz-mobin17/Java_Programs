@@ -5,9 +5,9 @@ import java.awt.event.*;
 public class ButtonDemo extends Applet implements ActionListener {
 
     public void init() {
-        Button b1 = new Button("Red");
-        Button b2 = new Button("Blue");
-        Button b3 = new Button("Green");
+        Button b1 = new Button("DARK_GRAY");
+        Button b2 = new Button("MAGENTA");
+        Button b3 = new Button("pink");
         add(b1);
         add(b2);
         add(b3);
@@ -17,17 +17,17 @@ public class ButtonDemo extends Applet implements ActionListener {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Button Demo", 100, 100);
+        g.drawString("A Program to show button demo", 100, 100);
     }
 
     public void actionPerformed(ActionEvent ae) {
         String str = ae.getActionCommand();
-        if (str.equals("Red")) {
-            setBackground(Color.red);
-        } else if (str.equals("Blue")) {
-            setBackground(Color.blue);
+        if (str.equals("DARK_GRAY")) {
+            setBackground(Color.DARK_GRAY);
+        } else if (str.equals("MAGENTA")) {
+            setBackground(Color.MAGENTA);
         } else {
-            setBackground(Color.green);
+            setBackground(Color.pink);
         }
     }
 

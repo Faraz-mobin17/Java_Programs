@@ -7,10 +7,10 @@ public class ControlLoopApplet extends Applet {
         for (int i = 1; i <= 4; i++) {
             if (i % 2 == 0) {
                 g.fillOval(90, i * 50 + 10, 50, 50);
-                g.setColor(Color.black);
+                g.setColor(Color.CYAN);
             } else {
                 g.drawOval(90, i * 50 + 10, 50, 50);
-                g.setColor(Color.red);
+                g.setColor(Color.MAGENTA);
             }
         }
     }

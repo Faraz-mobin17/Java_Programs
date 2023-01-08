@@ -10,9 +10,9 @@ public class StarApplet extends Applet {
 
     public void paint(Graphics g) {
         super.paint(g);
-        g.setColor(Color.blue);
+        g.setColor(Color.DARK_GRAY);
         g.fillPolygon(pentagonX, pentagonY, 5);
-        g.setColor(Color.red);
+        g.setColor(Color.ORANGE);
         g.drawPolygon(pentagonX, pentagonY, 5);
         g.setColor(Color.RED);
         g.drawPolygon(startX, startY, 6);

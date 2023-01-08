@@ -12,20 +12,19 @@ public class AppletEventHandling extends Applet implements MouseListener {
         addMouseListener(this);
         strBuf = new StringBuffer();
         addItem("initialize the applet");
-        addItem("welcome to amity");
+        addItem("welcome my frnds welcome");
     }
 
     public void start() {
-        addItem("starting the applet");
+        addItem("start");
     }
 
     public void stop() {
-        addItem("Stopping the applet");
+        addItem("Stop");
     }
 
     public void destroy() {
-        addItem("Destroying the applet");
-        addItem("Good boy !");
+        addItem("Destroy");
     }
 
     void addItem(String word) {

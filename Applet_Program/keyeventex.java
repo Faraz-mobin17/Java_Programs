@@ -14,14 +14,14 @@ public class keyeventex extends Applet implements KeyListener {
 
 	public void keyPressed(KeyEvent ke) {
 		msg = "Key pressed";
-		setBackground(Color.orange);
+		setBackground(Color.MAGENTA);
 		showStatus("Key Pressed");
 		repaint();
 	}
 
 	public void keyReleased(KeyEvent ke) {
 		msg = "Key Released";
-		setBackground(Color.red);
+		setBackground(Color.PINK);
 		showStatus("Key Released");
 		repaint();
 	}
@@ -29,13 +29,13 @@ public class keyeventex extends Applet implements KeyListener {
 	public void keyTyped(KeyEvent ke) {
 		msg = "Key typed";
 		msg += ke.getKeyChar();
-		setBackground(Color.blue);
+		setBackground(Color.LIGHT_GRAY);
 		showStatus("Key Typed");
 		repaint();
 	}
 
 	public void paint(Graphics g) {
-		Font f = new Font("Times New Roman", 2, 50);
+		Font f = new Font("Consolas", 2, 50);
 		g.setFont(f);
 		g.drawString(msg, x, y);
 	}

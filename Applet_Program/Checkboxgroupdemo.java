@@ -7,9 +7,9 @@ import javafx.scene.control.CheckBox;
 public class Checkboxgroupdemo extends Applet {
     public void init() {
         CheckboxGroup cbg = new CheckboxGroup();
-        Checkbox c1 = new Checkbox("cbse", cbg, true);
-        Checkbox c2 = new Checkbox("Icse", cbg, false);
-        Checkbox c3 = new Checkbox("ib", cbg, false);
+        Checkbox c1 = new Checkbox("chocolate", cbg, true);
+        Checkbox c2 = new Checkbox("ice cream", cbg, false);
+        Checkbox c3 = new Checkbox("maggie", cbg, false);
         // Checkbox c4 = new CheckBox("state board", cbg, false);
         add(c1);
         add(c2);
@@ -18,7 +18,7 @@ public class Checkboxgroupdemo extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Checkbox demo", 100, 100);
+        g.drawString("Program to show checkbox", 100, 100);
     }
 }
 
