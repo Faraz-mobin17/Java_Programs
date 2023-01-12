@@ -1,12 +1,5 @@
 package MultiThreading;
 
-class Counter {
-    int count;
-    public synchronized void increment() {
-        count++;
-    }
-}
-
 public class ThreadDemo4 {
     public static void main(String[] args) throws Exception {
         Counter c = new Counter();
@@ -27,3 +20,10 @@ public class ThreadDemo4 {
         System.out.println("Counter : " + c.count);
     }
 }
+class Counter {
+    int count;
+    public synchronized void increment() {
+        count++;
+    }
+}
+

@@ -1,5 +1,14 @@
 package Calculator;
-
+public class Main {
+    public static void main(String[] args) {
+        Mod first = new Mod();
+        first.add();
+        first.substract();
+        first.multiply();
+        first.divison();
+        first.module();
+    }
+}
 class Calculator {
     int x = 10;
     int y = 5;
@@ -28,13 +37,4 @@ class Mod extends Div {
         System.out.println(x%y);
     }
 }
-public class Main {
-    public static void main(String[] args) {
-        Mod first = new Mod();
-        first.add();
-        first.substract();
-        first.multiply();
-        first.divison();
-        first.module();
-    }
-}
+

@@ -1,11 +1,5 @@
 package Throw;
 
-class UserDefinedException extends Exception {
-    public UserDefinedException(String str) {
-        super(str);
-    }
-}
-
 public class TestThrow3 {
     public static void main(String[] args) throws Exception {
         try {
@@ -17,3 +11,9 @@ public class TestThrow3 {
         }
     }
 }
+class UserDefinedException extends Exception {
+    public UserDefinedException(String str) {
+        super(str);
+    }
+}
+

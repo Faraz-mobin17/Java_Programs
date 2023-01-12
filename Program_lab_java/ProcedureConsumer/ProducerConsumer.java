@@ -1,64 +1,65 @@
 package ProcedureConsumer;
-
-import java.util.LinkedList;
-
-public class ProducerConsumer {
-    LinkedList<Integer> list = new LinkedList<>();
-
-    public void produce() throws InterruptedException {
-        int value = 0;
-        while (true) {
-            synchronized (this) {
-                while (list.size() > 0) {
-                    wait();
-                }
-                System.out.println("Produced data");
-                list.add(value);
-                value++;
-                notify();
-                Thread.sleep(1000);
-            }
-        }
-    }
-
-    public void consume() throws InterruptedException {
-        while (true) {
-            synchronized (this) {
-                while (list.size() == 0) {
-                    wait();
-                    int value = list.removeFirst();
-                    System.out.println("consumed data" + value);
-                    notify();
-                    Thread.sleep(1000);
-                }
-            }
-        }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        ProducerConsumer pc = new ProducerConsumer();
-        Thread t1 = new Thread(new Runnable() {
-            public void run() {
-                try {
-                    pc.produce();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        Thread t2 = new Thread(new Runnable() {
-            public void run() {
-                try {
-                    pc.consume();
-                } catch (InterruptedException e) {
-                    // TODO: handle exception
-                    e.printStackTrace();
-                }
-            }
-        });
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
-    }
+public class  ProducerConsumer{
+	public static void main(String[] args) {
+		Q q= new Q();
+		new Producer(q);
+		new Consumer(q);
+		System.out.println("Press control c to stop");
+	}
 }
+class Q{
+	int n;
+	boolean valueSet = false;
+	synchronized int get() {
+		if(!valueSet)
+		try{
+			wait();
+		}
+		catch (InterruptedException e){
+			System.out.println("Interrupted Exception Caught");
+		}
+		System.out.println("Got: " + n);
+		valueSet = false;
+		notify();
+		return n ;
+	}
+	synchronized void put(int n) {
+		if(valueSet)
+		try{
+			wait();
+		}
+		catch (InterruptedException e){
+			System.out.println("Interrupted Exception Caught");
+		}
+		this.n= n;
+		valueSet = true;
+		System.out.println("Put: " + n);
+		notify();
+	}
+}
+class Producer implements  Runnable{
+	Q q;
+	Producer(Q q){
+		this.q=q;
+		new Thread(this,"Producer").start();
+	}
+	public void run(){
+		int i = 0;
+		while(true){
+			q.put(i++);
+		}
+	}
+}
+class Consumer implements Runnable{
+	Q q;
+	Consumer (Q q){
+		this.q=q;
+		new Thread(this,"Consumer").start();
+	}
+	public void run(){
+		while(true){
+			q.get();
+		}
+	}
+}
+
