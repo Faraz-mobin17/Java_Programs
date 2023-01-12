@@ -1,4 +1,4 @@
-package Excep;
+package Exceptional_handling;
 
 public class newExcep {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class newExcep {
         // try {
         // obj.method();
         // } catch (Exception e) {
-        // // TODO: handle exception
+        
         // System.out.println(e);
         // }
         obj.method();
@@ -17,7 +17,7 @@ public class newExcep {
         try {
             System.out.println(100 / 0);
         } catch (Exception e) {
-            // TODO: handle exception
+            
             System.out.println(e);
         }
         // System.out.println(100 / 0);

@@ -1,6 +1,6 @@
 // complete java reference page no 92.
 // for(type itr-var : collection) statement-block
-package For_Each_Loop;
+
 
 public class ForEach {
 	public static void main(String args[]) {

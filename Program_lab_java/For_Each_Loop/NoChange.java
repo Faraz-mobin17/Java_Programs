@@ -1,5 +1,3 @@
-package For_Each_Loop;
-
 // complete java reference pg 95
 // the for loop is essentially read only 
 public class NoChange {

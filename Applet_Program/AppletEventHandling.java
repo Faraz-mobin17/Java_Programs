@@ -42,19 +42,19 @@ public class AppletEventHandling extends Applet implements MouseListener {
     }
 
     public void MouseEntered(MouseEvent event) {
-
+        addItem("Mouse Entered");
     }
 
     public void mouseExited(MouseEvent event) {
-
+        addItem("Mouse Exited");
     }
 
     public void mousePressed(MouseEvent event) {
-
+        addItem("Mouse Presssed");
     }
 
     public void mouseReleased(MouseEvent event) {
-
+        addItem("Mouse released");
     }
 
     public void mouseClicked(MouseEvent event) {
@@ -64,8 +64,10 @@ public class AppletEventHandling extends Applet implements MouseListener {
     @Override
     public void mouseEntered(MouseEvent e) {
         // TODO Auto-generated method stub
-
+        addItem("Mouse Entered");
+        
     }
+
 }
 
 /*

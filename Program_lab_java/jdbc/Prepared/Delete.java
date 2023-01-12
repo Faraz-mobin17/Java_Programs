@@ -3,7 +3,7 @@ package Prepared;
 import java.sql.*;
 
 public class Delete {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try {
             String url = "jdbc:mysql://localhost:3306/mca";
             String uname = "root";
