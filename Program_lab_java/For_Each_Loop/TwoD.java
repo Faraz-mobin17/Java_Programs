@@ -3,6 +3,8 @@ package For_Each_Loop;
 public class TwoD {
     public static void main(String[] args) {
         int[] nums = {5,2,8,1};
+        int[] arr = new int[3];
+        arr = new int[6];
         int[][] nums2 = {
             {5,2,1,3},
             {1,2,3,4},
