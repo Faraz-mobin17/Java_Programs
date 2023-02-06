@@ -13,9 +13,9 @@ public class MethodOverloading {
 
 
 class Calc {
-    // public void show(byte b) {
-    //     System.out.println("Byte: " + b);
-    // }
+    public void show(byte b) {
+        System.out.println("Byte: " + b);
+    }
     public void show(short s) {
         System.out.println("Short: " + s);
     }
@@ -25,7 +25,7 @@ class Calc {
     public void show(double d) {
         System.out.println("Double: " + d);
     }
-    // public void show(char c) {
-    //     System.out.println("Char: " + c);
-    // }
+    public void show(char c) {
+        System.out.println("Char: " + c);
+    }
 }
