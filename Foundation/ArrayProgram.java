@@ -23,7 +23,7 @@ public class ArrayProgram {
         int []a[][];
         // valid array syntax
         int[] z = new int[0];
-        int[] d = new int['a'];
+        int[] d = new int['a']; // 97
         byte bb = 20;
         int[] e = new int[bb];
         short s = 30;
