@@ -13,5 +13,6 @@ public class ValidArrayDec {
         int[][][] k = new int[3][][5]; // invalid without specifying 2d how you can define 3rd dimension
         int[][][] l = new int[][4][5]; // invalid base size is not specified
         int[][][] m = new int[3][][]; // valid base size is there
+        System.out.print("hello");
     }
 }
