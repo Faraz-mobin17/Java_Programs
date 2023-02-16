@@ -2,6 +2,8 @@ package Foundation;
 
 public class StringConcat {
     public static void main(String[] args) {
-        System.out.println("String concat Program");
+        String s1 = new String("pw");
+        s1 = s1.concat("skills");
+        System.out.println(s1);
     }
 }
