@@ -73,7 +73,7 @@ public class TwoStack {
     }
     public void peek2() 
     {
-        if (top2 == size) 
+        if (top2 < size) 
         {
             return;
         }
