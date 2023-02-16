@@ -63,7 +63,22 @@ public class TwoStack {
             return -1;
         }
     }
-
+    public void peek1() 
+    {    
+        if (top1 == -1) 
+        {
+            return;
+        }
+        System.out.println(arr[top1]);
+    }
+    public void peek2() 
+    {
+        if (top2 == size) 
+        {
+            return;
+        }
+        System.out.println(arr[top2]);
+    }
     public void displayItems() 
     {
         for (int x : arr) 
@@ -79,6 +94,6 @@ public class TwoStack {
          ts.push1(3);
          ts.push2(4);
          ts.push2(5);
-         ts.displayItems();
+         ts.peek2();
     }
 }
