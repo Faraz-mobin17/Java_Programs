@@ -34,10 +34,16 @@ public class StringCheck {
         String s5 = new String("pw");
         String s6 = "pw";
         String s7 = "PW";
-        System.out.println(s5.equals(s6));
-        System.out.println(s6.equalsIgnoreCase(s7));
+        System.out.println("Using equals method : " + s5.equals(s6));
+        System.out.println("Ignoring lowercase: " + s6.equalsIgnoreCase(s7));
 
         String s8 = new String();
         System.out.println("String s8:  " + s8);
+
+        String s9 = "pwjava";
+        String s10 = "pwjava";
+        String s11 = "pwJAVA";
+        System.out.println("S9 and s10: " + (s9 == s10));
+        System.out.println("S9 and s11: " + (s9 == s11));
     }
 }
