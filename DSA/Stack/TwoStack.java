@@ -1,5 +1,5 @@
 package DSA.Stack;
-
+// Implement two Stacks in an Array
 public class TwoStack {
     private int arr[],top1,top2,size;
     public TwoStack(int size) 
@@ -73,7 +73,7 @@ public class TwoStack {
     }
     public void peek2() 
     {
-        if (top2 < size) 
+        if (top2 == size) 
         {
             return;
         }
