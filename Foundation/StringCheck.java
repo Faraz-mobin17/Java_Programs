@@ -23,7 +23,9 @@ public class StringCheck {
         String s2 = "pwskills";
 
         System.out.println(s1 == s2);
-
+        /*
+         * == compares string object references and equals method compares content of a string
+         */
         String s3 = new String("pwskills");
         String s4 = new String("pwskills");
         System.out.println(s3 == s4);
@@ -34,5 +36,8 @@ public class StringCheck {
         String s7 = "PW";
         System.out.println(s5.equals(s6));
         System.out.println(s6.equalsIgnoreCase(s7));
+
+        String s8 = new String();
+        System.out.println("String s8:  " + s8);
     }
 }
