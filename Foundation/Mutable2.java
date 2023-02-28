@@ -38,6 +38,7 @@ public class Mutable2 {
         System.out.println(sb2.capacity());
         sb2.append("java");
         System.out.println("String: "  + sb2);
+        
         sb2.trimToSize();  // changing capacity 
         System.out.println("Capacity: " + sb2.capacity());
         System.out.println("Reverse String: " + sb2.reverse());
