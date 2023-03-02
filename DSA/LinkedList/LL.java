@@ -1,6 +1,7 @@
 package DSA.LinkedList;
 public class LL {
-    private static Node head;
+    private static Node head = null;
+    private static Node tail = null;
     static class Node 
     {
         int data;
@@ -30,16 +31,16 @@ public class LL {
         head = Node;
     }
     public static void addAtLast(Node head,int data) {
-        Node Node = new Node(data);
+        Node node = new Node(data);
         if (head == null) {
-            head = Node;
+            head = node;
             return; 
         }
         Node temp = head;
         while (temp.next  != null) {
             temp = temp.next;
         }
-        temp.next = Node;
+        temp.next = node;
     }
     public static void addAtMiddle(Node head, int data, int position) {
         if (head == null) return;
@@ -63,15 +64,15 @@ public class LL {
         System.out.println("NULL");
     }
     public static void main(String[] args) {
-        Node firstNode = new Node(2);
-        Node secondNode = new Node(3);
-        Node thirdNode = new Node(4);
-        head = firstNode;
-        firstNode.next = secondNode;
-        secondNode.next = thirdNode;
+        // Node firstNode = new Node(2);
+        // Node secondNode = new Node(3);
+        // Node thirdNode = new Node(4);
+        // head = firstNode;
+        // firstNode.next = secondNode;
+        // secondNode.next = thirdNode;
         addAtFirst(1);
         addAtLast(head, 5);
-        addAtMiddle(head, 7, 3);
+        addAtMiddle(head, 7, 2);
         printList(head);
     }
 }
