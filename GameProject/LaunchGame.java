@@ -35,10 +35,10 @@ class Gusser
 class Player 
 {
     int guessNum;
-    public int guessingNumber() 
+    public int guessingNumber(int n) 
     {
         Scanner input = new Scanner(System.in);
-        System.out.println("Player kindly Guess the Number!");
+        System.out.println("Player"+ n +" kindly Guess the Number!");
         guessNum = input.nextInt();
         return guessNum;
     }
@@ -58,9 +58,9 @@ class Umpire
         Player p1 = new Player();
         Player p2 = new Player();
         Player p3 = new Player();
-        numberFromPlayer1 = p1.guessingNumber();
-        numberFromPlayer2 = p2.guessingNumber();
-        numberFromPlayer3 = p3.guessingNumber();
+        numberFromPlayer1 = p1.guessingNumber(1);
+        numberFromPlayer2 = p2.guessingNumber(2);
+        numberFromPlayer3 = p3.guessingNumber(3);
     }
     public void collectNumberFromGusser() 
     {
