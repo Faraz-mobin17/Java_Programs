@@ -6,6 +6,22 @@
 
 - Java is a popular programming language that is used to develop mobile apps, web apps, desktop apps, games and much more³. It is an object-oriented, class-based, concurrent, secured and general-purpose language⁶. It was developed by James Gosling at Sun Microsystems in 1991⁵.
 
+## Features
+
+- Object-oriented programming
+- Inheritance and polymorphism
+- Interfaces and abstract classes
+- Generics and collections
+- Exceptions and assertions
+- Input/output streams
+- Threads and concurrency
+
+## Installation
+
+To run this project, you need to have Java Development Kit (JDK) installed on your machine. You can download it from [here](https://www.oracle.com/java/technologies/javase-downloads.html).
+
+You also need to have an Integrated Development Environment (IDE) that supports Java, such as Eclipse, IntelliJ IDEA, or NetBeans. You can download them from their respective websites.
+
 ## Why is Java So Popular
 
 There are many reasons why Java is so popular among developers and programmers. Some of them are:
@@ -43,16 +59,16 @@ These are some of the best Java books that you can read to learn more about this
 
 ## How to compile Java Program
 
-C:\>javac Filename.java
+`C:\>javac Filename.java`
 
 ## How to run Java Program
 
-C:\>java Filename
+`C:\>java Filename`
 
 **OR**
 
-C:\>java Filename.java
+`C:\>java Filename.java`
 
 ## How to run Applet Program
 
-C:\>appletviewer.exe Filename.java
+`C:\>appletviewer.exe Filename.java`
