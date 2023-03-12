@@ -4,8 +4,10 @@
 
 ## What is Java
 
-`Java is a popular programming language that is used to develop mobile apps, web apps, desktop apps, games and much more³. It is an object-oriented, class-based, concurrent, secured and general-purpose language⁶. It was developed by James Gosling at Sun Microsystems in 1991⁵.
 `
+
+- Java is a popular programming language that is used to develop mobile apps, web apps, desktop apps, games and much more³. It is an object-oriented, class-based, concurrent, secured and general-purpose language⁶. It was developed by James Gosling at Sun Microsystems in 1991⁵.
+  `
 
 ## Why is Java So Popular
 
