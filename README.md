@@ -1,5 +1,9 @@
 # Welcome to Java
-![Java Programming](https://i.pcmag.com/imagery/articles/03mYCJkIdptJX1Soh08tBzt-1..v1630572092.jpg)
+
+![Java Programming](https://terralogic.com/wp-content/uploads/2021/06/jvm.png)
+
+![How to be an Java Expert](https://github.com/Faraz-mobin17/Java_Programs/wiki)
+
 ## How to compile Java Program
 
 `C:\>javac Filename.java`
