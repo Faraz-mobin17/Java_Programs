@@ -24,7 +24,7 @@ public class LL {
     }
     public void addFirst(int data)
     {
-        Node newNode = new Node(data);
+        final Node newNode = new Node(data);
         if (head == null) 
         {
             head = tail = newNode;
@@ -36,7 +36,7 @@ public class LL {
     public void addLast(int data) 
     {
         // O(n)
-        Node newNode = new Node(data);
+        final Node newNode = new Node(data);
         size++;
         if (head == null) 
         {
@@ -53,7 +53,7 @@ public class LL {
     public void addLast2(int data)
     {
         // O(1)
-        Node newNode = new Node(data);
+        final Node newNode = new Node(data);
         size++;
         if (head == null) {
             head = tail = newNode;
@@ -69,7 +69,7 @@ public class LL {
             addFirst(data);
             return;
         }
-        Node newNode = new Node(data);
+        final Node newNode = new Node(data);
         size++;
         Node temp = head;
         int count = 1;
