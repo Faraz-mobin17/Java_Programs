@@ -195,22 +195,22 @@ public class LL {
         // secondNode = new Node(2,thirdNode);
         // thirdNode = new Node(3);
 
-        ll.addFirst(1);
-        ll.addLast( 5);
-        ll.addMiddle( 7, 2);
-        System.out.println("display list");
-        ll.printList();
-        System.out.println("Size of LinkedList: " + LL.size);
-        ll.removeFirst();
-        System.out.println("display list");
-        ll.printList();
-        System.out.println("Size of LinkedList: " + LL.size);
-        ll.removeLast();
-        System.out.println("display list");
-        ll.printList();
-        System.out.println("Size of LinkedList: " + LL.size);
-        System.out.println(ll.search(7));
-        for (int i = 8; i <= 12; i += 1) {
+        // ll.addFirst(1);
+        // ll.addLast( 5);
+        // ll.addMiddle( 7, 2);
+        // System.out.println("display list");
+        // ll.printList();
+        // System.out.println("Size of LinkedList: " + LL.size);
+        // ll.removeFirst();
+        // System.out.println("display list");
+        // ll.printList();
+        // System.out.println("Size of LinkedList: " + LL.size);
+        // ll.removeLast();
+        // System.out.println("display list");
+        // ll.printList();
+        // System.out.println("Size of LinkedList: " + LL.size);
+        // System.out.println(ll.search(7));
+        for (int i = 1; i <= 5; i += 1) {
             ll.addFirst(i);
         }
         ll.reverseList();
