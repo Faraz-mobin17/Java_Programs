@@ -37,5 +37,7 @@ public class InnerDemo {
         // display(); // can't access 
         // obj.display(); // can't access
         obj1.display();
+
+        new A().new B().display(); // anonymous object
     }
 }
