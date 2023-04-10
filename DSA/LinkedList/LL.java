@@ -1,8 +1,8 @@
 package DSA.LinkedList;
 
 public class LL {
-    private Node head = null;
-    private Node tail = null;
+    private Node head = null; // optional by default value is null
+    private Node tail = null; // optional by default value is null
     private int size = 1;
 
     public static class Node {
