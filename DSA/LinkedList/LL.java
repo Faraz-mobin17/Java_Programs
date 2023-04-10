@@ -1,57 +1,58 @@
 package DSA.LinkedList;
 
 public class LL {
-    private static Node head = null;
-    private static Node tail = null;
-    private static int size = 1;
+    private Node head = null;
+    private Node tail = null;
+    private int size = 1;
 
-    public static class Node 
-    {
+    public static class Node {
         int data;
         Node next;
+
         // constructor
-        public Node(int data) 
-        {
+        public Node(final int data) {
             this.data = data;
-            next = null;
+            next = null; // optional by default null
         }
+
         // another constructor
-        public Node(int data, Node next) 
-        {
+        public Node(final int data, final Node next) {
             this.data = data;
             this.next = next;
         }
+
     }
-    public void addFirst(int data)
-    {
+
+    public int getSize() {
+        return size;
+    }
+
+    public void addFirst(final int data) {
         final Node newNode = new Node(data);
-        if (head == null) 
-        {
+        if (head == null) {
             head = tail = newNode;
             return;
         }
         newNode.next = head;
         head = newNode;
     }
-    public void addLast(int data) 
-    {
+
+    public void addLast(final int data) {
         // O(n)
         final Node newNode = new Node(data);
         size++;
-        if (head == null) 
-        {
+        if (head == null) {
             head = newNode;
-            return; 
+            return;
         }
         Node temp = head;
-        while (temp.next  != null) 
-        {
+        while (temp.next != null) {
             temp = temp.next;
         }
         temp.next = newNode;
     }
-    public void addLast2(int data)
-    {
+
+    public void addLast2(final int data) {
         // O(1)
         final Node newNode = new Node(data);
         size++;
@@ -62,10 +63,9 @@ public class LL {
         tail.next = newNode;
         tail = newNode;
     }
-    public void addMiddle(int data, int position) 
-    {
-        if (position == 1)
-        {
+
+    public void addMiddle(final int data, final int position) {
+        if (position == 1) {
             addFirst(data);
             return;
         }
@@ -73,67 +73,59 @@ public class LL {
         size++;
         Node temp = head;
         int count = 1;
-        while (temp != null && count < position - 1) 
-        {
+        while (temp != null && count < position - 1) {
             temp = temp.next;
             ++count;
         }
         newNode.next = temp.next;
         temp.next = newNode;
     }
-    public int removeFirst()
-    {
-        if (size == 0) 
-        {
+
+    public int removeFirst() {
+        if (size == 0) {
             System.out.println("Linked List is empty");
             return Integer.MIN_VALUE;
-        } 
-        else if (size == 1) 
-        {
-            int value = head.data;
+        }
+        else if (size == 1) {
+            final int value = head.data;
             head = tail = null;
             size = 0;
             return value;
         }
-        int value = head.data;
+        final int value = head.data;
         head = head.next;
         size--;
         return value;
     }
-    public int removeLast()
-    {
-        if (size == 0)
-        {
+
+    public int removeLast() {
+        if (size == 0) {
             System.out.println("Linked list is emtpy");
             return Integer.MIN_VALUE;
         }
-        else if (size == 1)
-        {
-            int value = head.data;
+        else if (size == 1) {
+            final int value = head.data;
             head = tail = null;
             size = 0;
             return value;
         }
-        
+
         Node prev = head;
-        for (int i = 0; i < size - 2; i += 1)
-        {
+        for (int i = 0; i < size - 2; i += 1) {
             prev = prev.next;
         }
-        int value = tail.data;
+        final int value = tail.data;
         prev.next = null;
         tail = prev;
         size--;
         return value;
     }
-    public int search(int key)
-    {
+
+    public int search(final int key) {
         Node temp = head;
         int index = 0;
-        while (temp != null)
-        {
-            if (temp.data == key)
-            {
+        while (temp != null) {
+            if (temp.data == key) {
                 return index;
             }
             temp = temp.next;
@@ -141,28 +133,30 @@ public class LL {
         }
         return Integer.MIN_VALUE;
     }
-    public int helper(Node head,int key)
-    {
+
+    public int helper(final Node head, final int key) {
         // Time complexity O(n)
         // Space complexity O(n)
-        if (head == null) return -1;
-        if (head.data == key) return 0;
-        int idx = helper(head, key);
-        if (idx == -1) return -1;
+        if (head == null)
+            return -1;
+        if (head.data == key)
+            return 0;
+        final int idx = helper(head, key);
+        if (idx == -1)
+            return -1;
         return idx + 1;
     }
-    public int searchRec(int key)
-    {
-        return helper(head,key);
+
+    public int searchRec(final int key) {
+        return helper(head, key);
     }
-    public void reverseList()
-    {
+
+    public void reverseList() {
         // Time complexity O(n)
         Node current = tail = head;
         Node prev = null;
         Node next;
-        while (current != null)
-        {
+        while (current != null) {
             next = current.next;
             current.next = prev;
             prev = current;
@@ -170,8 +164,10 @@ public class LL {
         }
         head = prev;
     }
+
     public void printList() {
-        if (head == null) return; // if the list is empty
+        if (head == null)
+            return; // if the list is empty
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "->");
@@ -179,14 +175,37 @@ public class LL {
         }
         System.out.println("NULL");
     }
-    
-    public static void main(String[] args) {
-        LL ll = new LL();
+
+    public void printList2() {
+        if (head == null)
+            return; // if the list is empty
+        Node temp = head;
+        for (; temp != null; temp = temp.next) {
+            System.out.print(temp.data + "->");
+        }
+        System.out.println("NULL");
+    }
+
+    public void printList3() {
+        if (head == null) {
+            return;
+        }
+        Node temp = head;
+        do {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        while (temp != null);
+        System.out.println("NULL");
+    }
+
+    public static void main(final String[] args) {
+        final LL ll = new LL();
         // Node firstNode = new Node(2);
         // Node secondNode = new Node(3);
         // Node thirdNode = new Node(4);
         // head = firstNode;
-        
+
         // firstNode.next = secondNode;
         // secondNode.next = thirdNode;
         // Node firstNode,secondNode,thirdNode;
@@ -216,4 +235,5 @@ public class LL {
         ll.reverseList();
         ll.printList();
     }
+
 }
