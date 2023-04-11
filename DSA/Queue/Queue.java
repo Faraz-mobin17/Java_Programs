@@ -1,89 +1,96 @@
 package DSA.Queue;
-public class Queue 
-{
+
+public class Queue {
     private int queue[];
-    private int front,rear,size;
-    public Queue(int size)
-    {
-        this.size = size;
-        front = rear = -1;
+    private int frontIndex, nextIndex, size, capacity;
+
+    public Queue(int size) {
+        this.size = 0;
+        capacity = size;
+        frontIndex = -1; // queue is empty
+        nextIndex = 0;
         queue = new int[size];
     }
-    public boolean isFull() 
-    {
-        return (rear == size - 1);
+
+    public int getSize() {
+        return size;
     }
-    public boolean isEmpty() 
-    {
-        return (front == -1 && rear == -1 || front == rear);
+
+    public boolean isFull() {
+        return (size == capacity);
     }
-    public void enqueue(int data)
-    {
-        if (isFull()) 
-        {
-            System.out.println("Queue is full can't insert elements");
+
+    public boolean isEmpty() {
+        return (size == 0);
+    }
+
+    public void enqueue(int val) {
+        if (isFull()) {
+            System.out.println("Queue is Full\n");
             return;
         }
-        if (front == -1) front = 0;
-        System.out.println("Inserting element:" + data);
-        rear++;
-        queue[rear] = data;
+        queue[nextIndex] = val;
+        nextIndex = (nextIndex + 1) % capacity;
+        if (frontIndex == -1)
+            frontIndex = 0;
+        size++;
     }
-    public void dequeue()
-    {
-        if (isEmpty())
-        {
-            System.out.println("Queue is empty can't remove elements");
-            return;
+
+    public int dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty\n");
+            return -1;
         }
-        int frontItem = queue[front];
-        front++;
-        System.out.println("Removed Item: " + frontItem);
+        int val = queue[frontIndex];
+        frontIndex = (frontIndex + 1) % capacity;
+        size--;
+        // code will work without this also
+        if (size == 0) {
+            frontIndex = -1;
+            nextIndex = 0;
+        }
+        return val;
     }
-    public void frontElement()
-    {
-        if (front == -1 || front == rear) return;
-        System.out.println("Element at Front is: " + queue[front]);
+
+    public int front() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty\n");
+            return Integer.MIN_VALUE;
+        }
+        return queue[frontIndex];
     }
-    public void rearElement()
-    {
-        if (rear == -1) return;
-        System.out.println("Element at rear is : " + queue[rear]);
+
+    public int rear() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty\n");
+            return Integer.MIN_VALUE;
+        }
+        return queue[nextIndex];
     }
-    public void display() 
-    {
-        if (isEmpty())
-        {
+
+    public void display() {
+        if (isEmpty()) {
             System.out.println("Queue is Empty");
             return;
         }
-        for (int index = front; index <= rear; ++index) 
-        {
-            System.out.println("Elements in Queue: " + queue[index]);
+        for (int i = 0; i < size; i += 1) {
+            System.out.println(queue[i]);
         }
     }
-    public int countElements() 
-    {
-        int count = 0;
-        while (front <= rear) 
-        {
-            count++;
-            front++;
-        }
-        return count;
-    }
-    public static void main(String[] args) 
-    {
+
+    public static void main(String[] args) {
         Queue q = new Queue(5);
-        for (int i = 1; i <= 5; ++i) {
+        for (int i = 1; i <= 5; i += 1) {
             q.enqueue(i);
         }
-        q.display();
-        q.frontElement();
-        q.rearElement();
         q.dequeue();
-        System.out.println("After removing the first item from the queue");
+        q.enqueue(6);
+        // q.display();
+        // q.front();
+        // q.rear();
+        // q.dequeue();
+        // System.out.println("After removing the first item from the queue");
         q.display();
-        System.out.println(q.countElements());
+        // System.out.println(q.countElements());
     }
 }
