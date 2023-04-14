@@ -1,4 +1,4 @@
-package Java_codes.src.DSA.Queue;
+package DSA.Queue;
 
 public class Queue {
     private int queue[];
