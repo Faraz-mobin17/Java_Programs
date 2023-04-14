@@ -1,3 +1,5 @@
+package Foundation.TypesOfVar;
+
 public class PowerCmdArgs {
 	public static void main(int[] args) {
 //		int n = Integer.parseInt(args[0]);
