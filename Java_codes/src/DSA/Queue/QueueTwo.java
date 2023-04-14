@@ -2,7 +2,9 @@ package DSA.Queue;
 
 public class QueueTwo {
     private  int queue[];
-    private static int nextIndex,firstIndex,length,capacity;
+    private static int nextIndex,firstIndex;
+    private int length;
+    private static int capacity;
     public QueueTwo(int size)
     {
         queue = new int[size];
