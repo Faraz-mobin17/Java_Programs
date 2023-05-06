@@ -1,8 +1,11 @@
 package DSA.Stack;
+
 import java.util.Scanner;
+
 public class Stack {
-    private int size,arr[],top,count;
+    private int size, arr[], top, count;
     private final int MAX = 10;
+
     public Stack() {
         System.out.println("Stack Created by Default Constructor of Size 5");
         this.top = -1;
@@ -10,6 +13,7 @@ public class Stack {
         this.arr = new int[MAX];
         this.count = 0;
     }
+
     public Stack(int size) {
         System.out.println("Stack Created by params Constructor");
         this.size = size;
@@ -17,6 +21,7 @@ public class Stack {
         this.top = -1;
         this.count = 0;
     }
+
     public Stack(Stack s) {
         System.out.println("Stack Created by Copy Constructor");
         this.size = s.size;
@@ -24,14 +29,17 @@ public class Stack {
         this.top = s.top;
         this.count = s.count;
     }
+
     public boolean isEmpty() {
         return (top == -1);
     }
+
     public boolean isFull() {
-        return (size - 1 == top);
+        return (count - 1 == top);
     }
+
     public void push(int data) {
-       
+
         if (isFull()) {
             System.out.println("Stack is Overflowing");
             return;
@@ -39,6 +47,7 @@ public class Stack {
         arr[++top] = data;
         count++;
     }
+
     public int pop() {
         if (isEmpty()) {
             System.out.println("Stack is Empty");
@@ -46,25 +55,30 @@ public class Stack {
         }
         return arr[top--];
     }
+
     public int peek() {
         if (!isEmpty()) {
-            return arr[top];    
+            return arr[top];
         }
         return top;
     }
+
     public int size() {
         return size;
     }
+
     public int countItems() {
         return count;
     }
+
     public void displayItems() {
-        for (int x : arr)
-        {
-            if (x == 0) break;
+        for (int x : arr) {
+            if (x == 0)
+                break;
             System.out.println(x);
         }
     }
+
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
             Stack s1 = new Stack(5);
@@ -114,6 +128,6 @@ public class Stack {
                         break;
                 }
             }
-        }  
+        }
     }
 }
