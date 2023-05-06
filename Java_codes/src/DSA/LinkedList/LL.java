@@ -5,7 +5,7 @@ public class LL {
     private Node tail = null; // optional by default value is null
     private int size = 1;
 
-    public static class Node {
+    private static class Node {
         int data;
         Node next;
 
@@ -85,8 +85,7 @@ public class LL {
         if (size == 0) {
             System.out.println("Linked List is empty");
             return Integer.MIN_VALUE;
-        }
-        else if (size == 1) {
+        } else if (size == 1) {
             final int value = head.data;
             head = tail = null;
             size = 0;
@@ -102,8 +101,7 @@ public class LL {
         if (size == 0) {
             System.out.println("Linked list is emtpy");
             return Integer.MIN_VALUE;
-        }
-        else if (size == 1) {
+        } else if (size == 1) {
             final int value = head.data;
             head = tail = null;
             size = 0;
@@ -194,8 +192,7 @@ public class LL {
         do {
             System.out.print(currentNode.data + "->");
             currentNode = currentNode.next;
-        }
-        while (currentNode != null);
+        } while (currentNode != null);
         System.out.println("NULL");
     }
 
