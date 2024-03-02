@@ -1,31 +1,47 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Scanner;
+class Comments {
+    private int id, user_id, video_id;
+    private String content;
 
-public class Comments {
-    public static void main(String[] args) {
-
-        String url = "jdbc:mysql://localhost:3306/Youtube";
-        String username = "root";
-        String password = "toor";
-
-        try (Connection con = DriverManager.getConnection(url, username, password)) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter Comments");
-            String content = sc.nextLine();
-            String sql = "INSERT INTO Comments(content) VALUES(?)";
-            PreparedStatement pstmt = con.prepareStatement(sql);
-
-            pstmt.setString(1, content);
-
-            int rowInserted = pstmt.executeUpdate();
-            if (rowInserted > 0) {
-                System.out.println("A new Comment has been inserted");
-            }
-        } catch (SQLException e) {
-            System.err.println("Error while inserted data: " + e.getMessage());
-        }
+    public Comments() {
     }
+
+    public Comments(int id, int user_id, int video_id, String content) {
+        this.id = id;
+        this.user_id = user_id;
+        this.video_id = video_id;
+        this.content = content;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public int getVideo_id() {
+        return video_id;
+    }
+
+    public void setVideo_id(int video_id) {
+        this.video_id = video_id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 }

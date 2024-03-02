@@ -1,16 +1,14 @@
-class Playlists {
+class WatchHistory {
     private int id, user_id, video_id;
-    private String name, description;
+    private String watched_at;
 
-    public Playlists() {
-    }
+    public WatchHistory() {}
 
-    public Playlists(int id, int user_id, int video_id, String name, String description) {
+    public WatchHistory(int id, int user_id, int video_id, String watched_at) {
         this.id = id;
         this.user_id = user_id;
         this.video_id = video_id;
-        this.name = name;
-        this.description = description;
+        this.watched_at = watched_at;
     }
 
     public int getId() {
@@ -37,20 +35,13 @@ class Playlists {
         this.video_id = video_id;
     }
 
-    public String getName() {
-        return name;
+    public String getWatched_at() {
+        return watched_at;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWatched_at(String watched_at) {
+        this.watched_at = watched_at;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    
 }

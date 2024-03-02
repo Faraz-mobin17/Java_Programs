@@ -1,54 +1,94 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Scanner;
+class Videos {
+    private int id, user_id, duration, views;
+    private String videoFile, thumbnail, title, description;
+    private boolean isPublished;
 
-public class Videos {
-    public static void main(String[] args) {
-
-        String url = "jdbc:mysql://localhost:3306/Youtube";
-        String username = "root";
-        String password = "toor";
-
-        try (Connection con = DriverManager.getConnection(url, username, password)) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter VideFile");
-            String videoFile = sc.nextLine();
-            System.out.println("Enter Thumbnail");
-            String thumbnail = sc.nextLine();
-            System.out.println("Enter Owner");
-            int owner = sc.nextInt();
-            sc.nextLine();
-            System.out.println("Enter Title");
-            String title = sc.nextLine();
-            System.out.println("Enter description");
-            String description = sc.nextLine();
-            System.out.println("Enter duration");
-            int duration = sc.nextInt();
-            System.out.println("Enter Views");
-            int views = sc.nextInt();
-            System.out.println("Enter is published");
-            boolean isPublished = sc.nextBoolean();
-            String sql = "INSERT INTO Videos (videoFile, thumbnail, owner, title, description, duration, views, isPublished) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-
-            PreparedStatement pstmt = con.prepareStatement(sql);
-
-            pstmt.setString(1, videoFile);
-            pstmt.setString(2, thumbnail);
-            pstmt.setInt(3, owner);
-            pstmt.setString(4, title);
-            pstmt.setString(5, description);
-            pstmt.setInt(6, duration);
-            pstmt.setInt(7, views);
-            pstmt.setBoolean(8, isPublished);
-
-            int rowInserted = pstmt.executeUpdate();
-            if (rowInserted > 0) {
-                System.out.println("A new Video has been inserted");
-            }
-        } catch (SQLException e) {
-            System.err.println("Error while inserted data: " + e.getMessage());
-        }
+    public Videos() {
     }
+
+    public Videos(int id, int user_id, int duration, int views, String videoFile, String thumbnail, String title,
+            String description, boolean isPublished) {
+        this.id = id;
+        this.user_id = user_id;
+        this.duration = duration;
+        this.views = views;
+        this.videoFile = videoFile;
+        this.thumbnail = thumbnail;
+        this.title = title;
+        this.description = description;
+        this.isPublished = isPublished;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
+
+    public String getVideoFile() {
+        return videoFile;
+    }
+
+    public void setVideoFile(String videoFile) {
+        this.videoFile = videoFile;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isPublished() {
+        return isPublished;
+    }
+
+    public void setPublished(boolean isPublished) {
+        this.isPublished = isPublished;
+    }
+
 }
