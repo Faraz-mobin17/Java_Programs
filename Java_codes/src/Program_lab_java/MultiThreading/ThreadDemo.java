@@ -1,4 +1,4 @@
-package MultiThreading;
+package Program_lab_java.MultiThreading;
 
 public class ThreadDemo  {
     public static void main(String[] args) {

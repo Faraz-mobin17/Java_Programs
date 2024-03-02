@@ -39,7 +39,7 @@ public class Queue {
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("Queue is Empty\n");
-            return -1;
+            return Integer.MIN_VALUE;
         }
         int val = queue[frontIndex];
         frontIndex = (frontIndex + 1) % capacity;

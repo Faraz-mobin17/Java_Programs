@@ -1,4 +1,4 @@
-package MultiThreading;
+package Program_lab_java.MultiThreading;
 public class ThreadDemo2  {
     public static void main(String[] args) {
         Runnable obj1 = new Hi();

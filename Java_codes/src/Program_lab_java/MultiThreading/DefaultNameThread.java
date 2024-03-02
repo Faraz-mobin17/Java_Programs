@@ -1,4 +1,4 @@
-package MultiThreading;
+package Program_lab_java.MultiThreading;
 public class DefaultNameThread {
 	public static void main(String args[]){
 		MyThread t= new MyThread();
