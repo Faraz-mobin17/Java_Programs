@@ -39,6 +39,11 @@ class User {
         return coverImage;
     }
 
+    public String getDetails() {
+        return "User [username=" + username + ", email=" + email + ", fullname=" + fullname + ", avatar=" + avatar
+                + ", coverImage=" + coverImage + "]";
+    }
+
     public void registerUser() {
         String userExists = "SELECT username, email FROM Users WHERE username = ? OR email = ?";
         try {
