@@ -5,7 +5,7 @@ class Queue  {
     private int size, max_capacity, frontIndex, nextIndex;
     private Scanner sc;
     private MovieTicket movieTicket;
-
+    private AudiOne audiOne;
     public Queue(int max_capacity) {
         this.queue = new Person[max_capacity];
         this.max_capacity = max_capacity;
@@ -58,15 +58,15 @@ class Queue  {
                         "PVR: Logix Mall Noida", "Audi 10", "A0101");
                 person.setGotTicket(true);
                 person.setPersonTicketDetails(movieTicket);
-                new AudiOne(person.getPersonMovieTicketDetails(), person);
-                dequeue();
+                audiOne = new AudiOne(person.getPersonMovieTicketDetails(),person);
+                // new AudiOne().setPersonAndMovieTicket(person.getPersonMovieTicketDetails(), person);
                 break;
             case "No":
                 person.setGotTicket(false);
             default:
                 break;
         }
-        return person.getName() + " is added in the Queue and got the Ticket: " + person.getGotTicket();
+        return person.getName() + " is added in the Queue and got the Ticket: ";
     }
 
     public String dequeue() {
